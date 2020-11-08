@@ -35,7 +35,7 @@ a.skip{
 
 body{
     font-family: "Quicksand";
-    background-image: url(images/CutBG_00000.png);
+    background-image: url(Images/CutBG_00000.png);
     background-color: whitesmoke;
     background-attachment: fixed;
     background-repeat: repeat;
@@ -50,7 +50,7 @@ header {
     align-items: center;
     background-color: white;
     padding: 1em;
-    border-bottom: 5px solid rgb(255, 114, 96);
+    border-bottom: 5px solid #e43c25;
 }
 
 header h1{
@@ -84,18 +84,18 @@ li {
   
 li a {
     display: inline-block;
-    color: rgb(255, 0, 0);
+    color: rgb(136, 0, 0);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
   }
   
 li a:hover:not(.active) {
-    background-color: #641212;
+    background-color: #ff8777;
   }
   
 ul li.current{
-    background-color: #ffe8e8;
+    background-color: #ff6161;
   }
 li.current a{
     text-decoration: underline;
