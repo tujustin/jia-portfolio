@@ -30,7 +30,7 @@ header {
     background-color: white;
     align-content: center;
     padding: 1em;
-    border-bottom: 5px solid red;
+    border-bottom: 5px solid rgb(255, 114, 96);
 }
 
 header h1{
@@ -77,6 +77,9 @@ li a:hover:not(.active) {
 ul li.current{
     background-color: #ffe8e8;
   }
+li.current a{
+    text-decoration: underline;
+}
 
 /**
     HomePage
@@ -275,19 +278,23 @@ ul li.current{
     font-size: 2em;
     align-content: center;
     z-index: 2;
+    text-align: center;
+    font-family: "Oswald";
 }
 
 .foodcontainer{
+    margin: auto;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
 }
 
-.foodcontainer h1{
+.foodtitle{
+    color: white;
     text-align: center;
     font-size: 2em;
     padding: 0.5em;
-    color: white;
     text-decoration: underline;
 }
 
@@ -295,26 +302,35 @@ ul li.current{
     font-size: 2em;
 }
 
-.review1, .review2, .review3, .review4, .review5, .review6, .review7{
-    margin: auto;
-    height: auto;
-    margin-left: 300px;
-    margin-right: 300px;
+.foodcontainer a:visited{
+    color: purple;
+}
+
+.foodcontainer a:link{
+    color: darkred;
+}
+
+.foodcontainer p{
+    padding: 5px;
+}
+
+.review{
+    margin: 10px;
+    height: 425px;
+    width: 425px;
     padding: 1em;
-    background: rgb(112, 54, 54);
     background: rgba(255, 238, 238, 0.4);
     text-align: center;
 }
 
-.review1 img, .review2 img, .review3 img, .review4 img, .review5 img,
-.review6 img, .review7 img{
+.review img{
     margin-left: auto;
     margin-right: auto;
     border: 1px solid #ddd;
     border-radius: 4px;
     padding: 5px;
-    width: 300px;
-    height: 300px;
+    width: 225px;
+    height: 225px;
     object-fit: cover;
 }
 
@@ -559,5 +575,9 @@ font-size: 1em;
         display: flex;
         flex-direction: column;
         justify-content: center;
+    }
+
+    .review{
+        flex-direction: column;
     }
 }
