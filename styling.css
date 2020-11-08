@@ -14,7 +14,7 @@ figcaption, h1, h2, h3, ul, li, body, div, p, img {
 body{
     font-family: "Quicksand";
     background-image: url(images/carbon-fiber.jpg);
-    background-color: black;
+    background-color: whitesmoke;
     background-attachment: fixed;
     background-position: center;
     background-repeat: repeat;
@@ -24,6 +24,9 @@ body{
 }
 
 header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: white;
     align-content: center;
     padding: 1em;
@@ -33,49 +36,89 @@ header {
 header h1{
     font-size: 4em;
     color: black;
-    margin: auto;
+    text-align: left;
+    border: 1px solid darkred;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+footer{
+    border-top: 5px solid red;
+    background-color: black;
+    color: white;
+    padding: 50px;
     text-align: center;
 }
 
-header p{
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+  }
+  
+li {
+    float: left;
+  }
+  
+li a {
+    display: inline-block;
+    color: rgb(255, 0, 0);
     text-align: center;
-}
-
-a:link{
-    font-weight: bold;
-    color:red;
-}
-
-a:hover{
-    color: black;
-}
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+li a:hover:not(.active) {
+    background-color: #641212;
+  }
+  
+ul li.current{
+    background-color: #ffe8e8;
+  }
 
 /**
     HomePage
 **/
 
-.bio {
+.bio{
     display: flex;
-    padding: 2em;
-    justify-content: baseline;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    padding-left: 15em;
+    padding-right: 15em;
+    font-family: "Oswald";
+    background: rgb(36,0,0);
+    background: linear-gradient(90deg, rgba(36,0,0,1) 53%, rgba(172,0,0,1) 100%);
+    box-shadow: 0 8px 6px -6px black;
 }
 
 .biotextbox{
-    padding: 15;
-    background: rgb(112, 54, 54);
-    background: rgba(112, 54, 54, 0.4);
-}
-
-.bio p{
-    display: flex;
-    justify-content: center;
+    padding: 1em;
     color: white;
-    padding: 130px 20px 0 40px;
     text-align: left;
-    font-size: 2em;
-    align-content: center;
+    align-items: center;
 }
 
+.biotextbox h1{
+    padding-bottom: .5em;
+    font-size: 4em;
+    border-bottom: 1px solid white;
+}
+
+.biotextbox p{
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+.jiapic img{
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+}
 /**
     This is set up for everything in the container, gallary, and other things
 **/
@@ -89,6 +132,7 @@ a:hover{
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: repeat(12, 5vw);
     grid-gap: 1.5rem;
+    
 }
 
 .galleryimg{
@@ -106,7 +150,6 @@ a:hover{
     justify-content: center;
     color: white;
     font-size: 2em;
-
 }
 
 .pic1:hover, .pic2:hover, .pic3:hover, .pic4:hover, .pic5:hover, .pic6:hover{
@@ -149,18 +192,21 @@ a:hover{
     background-color: brown;
     grid-column: 1 / span 4;
     grid-row: 1 / span 4;
+    box-shadow: 0 8px 6px -6px black;
 }
 
 .pic1, .overlay1{
     transition: .5s ease;
     grid-column: 5 / span 2;
     grid-row: 1 / span 4;
+    box-shadow: 0 8px 6px -6px black;
 }
 
 .pic2, .overlay2{
     transition: .5s ease;
     grid-column: 7 / span 2;
     grid-row: 1 / span 4;
+    box-shadow: 0 8px 6px -6px black;
 }
 
 .gallerytext2{
@@ -170,18 +216,21 @@ a:hover{
     background-color: brown;
     grid-column: 5 / span 4;
     grid-row: 5 / span 4;
+    box-shadow: 0 8px 6px -6px black;
 }
 
 .pic3, .overlay3{
     transition: .5s ease;
     grid-column: 1 / span 2;
     grid-row: 5 / span 4;
+    box-shadow: 0 8px 6px -6px black;
 }
 
 .pic4, .overlay4{
     transition: .5s ease;
     grid-column: 3 / span 2;
     grid-row: 5 / span 4;
+    box-shadow: 0 8px 6px -6px black;
 }
 
 .gallerytext3{
@@ -191,18 +240,21 @@ a:hover{
     background-color: brown;
     grid-column: 1 / span 4;
     grid-row: 9 / span 4;
+    box-shadow: 0 8px 6px -6px black;
 }
 
 .pic5, .overlay5{
     transition: .5s ease;
     grid-column: 5 / span 2;
     grid-row: 9 / span 4;
+    box-shadow: 0 8px 6px -6px black;
 }
 
 .pic6, .overlay6{
     transition: .5s ease;
     grid-column: 7 / span 2;
     grid-row: 9 / span 4;
+    box-shadow: 0 8px 6px -6px black;
 }
 
 /**
