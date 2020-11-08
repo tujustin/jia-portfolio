@@ -5,7 +5,29 @@ figcaption, h1, h2, h3, ul, li, body, div, p, img {
     font-size: 100%;
     vertical-align: baseline;
     border: 0;
+    
 }
+
+a.skip{
+    background: white;
+    left: 0;
+    padding: 6px;
+    position: absolute;
+    top: -40px;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 1;
+  }
+  
+  a.skip:focus{
+    top:20px;
+    color: black;
+    text-decoration-style: solid;
+  }
+  
+  *:focus{
+    border: 2px solid black;
+  }
 
 /**
     This is the entire set up for the body, nav, header, and footer
@@ -13,12 +35,11 @@ figcaption, h1, h2, h3, ul, li, body, div, p, img {
 
 body{
     font-family: "Quicksand";
-    background-image: url(images/carbon-fiber.jpg);
+    background-image: url(images/CutBG_00000.png);
     background-color: whitesmoke;
     background-attachment: fixed;
-    background-position: center;
     background-repeat: repeat;
-    background-size: 10%;
+    background-size: 50%;
     margin: 0;
 
 }
@@ -28,7 +49,6 @@ header {
     justify-content: space-between;
     align-items: center;
     background-color: white;
-    align-content: center;
     padding: 1em;
     border-bottom: 5px solid rgb(255, 114, 96);
 }
@@ -164,6 +184,7 @@ li.current a{
     text-align: center;
     font-size: 1em;
     font-style: italic;
+    padding-top: 9em;
 }
 
 .gallerytext img, .gallerytext2 img, .gallerytext3 img, .foodbio img{
@@ -173,6 +194,8 @@ li.current a{
     width: 100%;
     height: auto;
     opacity: 0.3;
+    min-width: 100%;
+    min-height: 100%
 }
 
 .gallerytext h1, .gallerytext2 h1, .gallerytext3 h1{
@@ -291,7 +314,7 @@ li.current a{
 }
 
 .foodtitle{
-    color: white;
+    color: rgb(0, 0, 0);
     text-align: center;
     font-size: 2em;
     padding: 0.5em;
@@ -319,7 +342,7 @@ li.current a{
     height: 425px;
     width: 425px;
     padding: 1em;
-    background: rgba(255, 238, 238, 0.4);
+    background: rgba(122, 104, 104, 0.404);
     text-align: center;
 }
 
@@ -348,11 +371,11 @@ li.current a{
     font-size: 1.2em;
 }
 #gametext2 p, #gametext3 p{
-color: white;
-align-content: center;
-position: relative;
-padding: 5em;
-font-size: 1em;
+    color: white;
+    align-content: center;
+    position: relative;
+    padding: 5em;
+    font-size: 1em;
 }
 
 #f2{
@@ -363,6 +386,9 @@ font-size: 1em;
     animation-name: fade;
     animation-iteration-count: infinite;
     animation-duration: 10s;
+    min-width: 100%;
+    min-height: 100%
+    
 }
 
 .textcontainer {
@@ -411,8 +437,13 @@ font-size: 1em;
   }
 
 .gamevideo{
-    width: auto;
-    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 100%; 
+    min-height: 100%;
+    width: auto; 
+    height: auto; 
     grid-column: 1 / span 4;
     grid-row: 9 / span 4;
 }
@@ -424,7 +455,12 @@ font-size: 1em;
   }
 
 .gamevideo2{
-    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 100%; 
+    min-height: 100%;
+    width: auto; 
     height: auto;
     grid-column: 5 / span 4;
     grid-row: 13 / span 4;
@@ -451,11 +487,13 @@ font-size: 1em;
 .animecontainer h1{
     font-size: 2em;
     padding: 10px;
+    color: white;
 }
 
 .animecontainer p{
     padding: 15px;
     font-size: 1.2em;
+    color: white;
 }
 
 .animepic1{
@@ -466,7 +504,8 @@ font-size: 1em;
 .animereview1{
     grid-column: 3 / span 4;
     grid-row: 1 / span 4;
-    background-color: brown;
+    background: rgb(38,0,79);
+    background: linear-gradient(90deg, rgba(38,0,79,1) 28%, rgba(184,91,91,1) 100%);
 }
 
 .animepic2{
@@ -477,7 +516,8 @@ font-size: 1em;
 .animereview2{
     grid-column: 3 / span 4;
     grid-row: 5 / span 4;
-    background-color: brown;
+    background: rgb(38,0,79);
+    background: linear-gradient(90deg, rgba(38,0,79,1) 28%, rgba(184,91,91,1) 100%);
 }
 
 .animepic3{
@@ -488,7 +528,8 @@ font-size: 1em;
 .animereview3{
     grid-column: 3 / span 4;
     grid-row: 9 / span 4;
-    background-color: brown;
+    background: rgb(38,0,79);
+    background: linear-gradient(90deg, rgba(38,0,79,1) 28%, rgba(184,91,91,1) 100%);
 }
 
 .animepic4{
@@ -499,7 +540,8 @@ font-size: 1em;
 .animereview4{
     grid-column: 3 / span 4;
     grid-row: 13 / span 4;
-    background-color: brown;
+    background: rgb(38,0,79);
+    background: linear-gradient(90deg, rgba(38,0,79,1) 28%, rgba(184,91,91,1) 100%);
 }
 
 .animepic5{
@@ -510,7 +552,8 @@ font-size: 1em;
 .animereview5{
     grid-column: 3 / span 4;
     grid-row: 17 / span 4;
-    background-color: brown;
+    background: rgb(38,0,79);
+    background: linear-gradient(90deg, rgba(38,0,79,1) 28%, rgba(184,91,91,1) 100%);
 }
 
 .animepic6{
@@ -521,7 +564,8 @@ font-size: 1em;
 .animereview6{
     grid-column: 3 / span 4;
     grid-row: 21 / span 4;
-    background-color: brown;
+    background: rgb(38,0,79);
+    background: linear-gradient(90deg, rgba(38,0,79,1) 28%, rgba(184,91,91,1) 100%);
 }
 
 .animepic7{
@@ -532,7 +576,8 @@ font-size: 1em;
 .animereview7{
     grid-column: 3 / span 4;
     grid-row: 25 / span 4;
-    background-color: brown;
+    background: rgb(38,0,79);
+    background: linear-gradient(90deg, rgba(38,0,79,1) 28%, rgba(184,91,91,1) 100%);
 }
 
 .animepic8{
@@ -543,7 +588,8 @@ font-size: 1em;
 .animereview8{
     grid-column: 3 / span 4;
     grid-row: 29 / span 4;
-    background-color: brown;
+    background: rgb(38,0,79);
+    background: linear-gradient(90deg, rgba(38,0,79,1) 28%, rgba(184,91,91,1) 100%);
 }
 
 .animepic9{
@@ -554,7 +600,8 @@ font-size: 1em;
 .animereview9{
     grid-column: 3 / span 4;
     grid-row: 33 / span 4;
-    background-color: brown;
+    background: rgb(38,0,79);
+    background: linear-gradient(90deg, rgba(38,0,79,1) 28%, rgba(184,91,91,1) 100%);
 }
 
 .animepic10{
@@ -565,19 +612,87 @@ font-size: 1em;
 .animereview10{
     grid-column: 3 / span 4;
     grid-row: 37 / span 4;
-    background-color: brown;
+    background: rgb(38,0,79);
+    background: linear-gradient(90deg, rgba(38,0,79,1) 28%, rgba(184,91,91,1) 100%);
 }
 
 
-@media screen and (min-width: 850px){
+@media screen and (max-width: 850px){
+    
+    header{
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: unset;
+    }
+
+    .bio{
+        padding: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav_links{
+        padding-top: 10px;
+    }
+    
+    /**
+        Bio Stuff
+    **/
     .biocontainer, .overlay1, .overlay2, 
     .overlay3, .overlay4, .overlay5, .overlay6{
         display: flex;
         flex-direction: column;
         justify-content: center;
+        padding:unset;
+    }
+
+    .biocontainer img, .foodbio img, .animecontainer img{
+        flex-shrink: 0;
+        min-width: 100%;
+        min-height: 100%
+    }
+
+    .biocontainer p{
+        display: flex;
+        font-size: 100%;
+    }
+
+    .biocontainer h1{
+        font-size: 1.5em;
+    }
+
+    /**
+        Food Stuff
+    **/
+
+    .foodbio{
+        padding: 2em;
+    }
+    .foodbio p{
+        font-size: unset;
     }
 
     .review{
         flex-direction: column;
     }
+
+    /**
+        Anime Stuff
+    **/
+    .animecontainer{
+        display: flex;
+    }
+
+    .animecontainer h1{
+        font: unset;
+        padding-bottom: unset;
+    }
+
+    .animecontainer p{
+        display: flex;
+        overflow: hidden;
+        font-size: 6.5px;
+    }
+    
 }
